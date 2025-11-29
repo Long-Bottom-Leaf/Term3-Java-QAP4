@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
 public class DrugFileManager {
     // File name constant
-    private static final String FILE_NAME = "drug_data.txt";
+    private static final String FILE_NAME = "resources/drug_data.txt";
 
     // Save drug to file
     public static void addDrug(Drug drug) {

@@ -18,10 +18,10 @@ public class PatientDatabaseManager {
         try (Connection connection = DriverManager.getConnection(DB_URL, USER, PASSWORD);
             PreparedStatement prepStmt = connection.prepareStatement(insertSQL))
         {
-            prepStmt.setInt(1, patient.patientId);
-            prepStmt.setString(2, patient.patientFirstName);
-            prepStmt.setString(3, patient.patientLastName);
-            prepStmt.setString(4, patient.patientDOB);
+            prepStmt.setInt(1, patient.getPatientId());
+            prepStmt.setString(2, patient.getPatientFirstName());
+            prepStmt.setString(3, patient.getPatientLastName());
+            prepStmt.setString(4, patient.getPatientDOB());
 
             prepStmt.executeUpdate();
             System.out.println("Patient added successfully!");
