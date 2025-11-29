@@ -26,7 +26,7 @@ public class Application {
             try {
                 choice = scan.nextInt();
             } catch (InputMismatchException e) {
-                System.out.println("⚠ Invalid choice! Please enter a number 0-4.");
+                System.out.println("Invalid choice! Please enter a number 0-4.");
                 scan.nextLine();
                 continue;
             }
@@ -49,7 +49,7 @@ public class Application {
 
                         DrugFileManager.addDrug(new Drug(id, name, cost, dosage));
                     } catch (Exception e) {
-                        System.out.println("⚠ Invalid input! Please try again.");
+                        System.out.println("Invalid input! Please try again.");
                         scan.nextLine();
                     }
                     break;
@@ -57,7 +57,7 @@ public class Application {
                 case 2:
                     System.out.println("\n--- Drugs From File ---");
                     DrugFileManager.loadDrugs().forEach(System.out::println);
-                    System.out.println("✔ Drugs successfully loaded.");
+                    System.out.println("Drugs successfully loaded.");
                     break;
 
                 case 3:
@@ -74,7 +74,7 @@ public class Application {
 
                         PatientDatabaseManager.addPatient(new Patient(patientId, patientFirstName, patientLastName, patientDOB));
                     } catch (Exception e) {
-                        System.out.println("⚠ Invalid input! Please try again.");
+                        System.out.println("Invalid input! Please try again.");
                         scan.nextLine();
                     }
                     break;
@@ -82,7 +82,7 @@ public class Application {
                 case 4:
                     System.out.println("\n--- Patients From Database ---");
                     PatientDatabaseManager.getAllPatients().forEach(System.out::println);
-                    System.out.println("✔ Patients successfully loaded.");
+                    System.out.println("Patients successfully loaded.");
                     break;
 
                 case 0:
@@ -90,7 +90,7 @@ public class Application {
                     break;
 
                 default:
-                    System.out.println("⚠ Invalid option! Please choose 0–4.");
+                    System.out.println("Invalid option! Please choose 0-4.");
             }
 
         } while (choice != 0);
