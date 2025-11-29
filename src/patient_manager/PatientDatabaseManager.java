@@ -6,9 +6,9 @@ import java.util.ArrayList;
 
 public class PatientDatabaseManager {
     // database connection parameters
-    private static final String DB_URL = "";
-    private static final String USER = "";
-    private static final String PASSWORD = "";
+    private static final String DB_URL = "jdbc:postgresql://localhost:5432/Term3_Java_QAP4";
+    private static final String USER = "postgres";
+    private static final String PASSWORD = "StudentLogin1234";
 
     // Add patient to database
     public static void addPatient(Patient patient) {
