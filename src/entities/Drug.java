@@ -1,11 +1,13 @@
 package entities;
 
 public class Drug {
+    // Drug properties
     private int drugId;
     private String drugName;
     private double drugCost;
     private String dosage;
 
+    // Constructor
     public Drug(int drugId, String drugName, double drugCost, String dosage) {
         this.drugId = drugId;
         this.drugName = drugName;
@@ -13,6 +15,7 @@ public class Drug {
         this.dosage = dosage;
     };
 
+    // Output
     @Override
     public String toString() {
         return "Drug: " + drugId + ", " + drugName + ", " + drugCost + ", " + dosage;

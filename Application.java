@@ -9,6 +9,7 @@ public class Application {
         Scanner scan = new Scanner(System.in);
         int choice;
 
+        // Menu loop
         do {
             System.out.println("\n=== MENU ===");
             System.out.println("1. Save Drug to File");
@@ -20,6 +21,7 @@ public class Application {
             choice = scan.nextInt();
             scan.nextLine();
 
+            // Handle menu choices
             switch (choice) {
                 case 1:
                     System.out.print("Drug ID: ");

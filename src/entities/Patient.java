@@ -1,11 +1,13 @@
 package entities;
 
 public class Patient {
+    // Patient properties
     public int patientId;
     public String patientFirstName;
     public String patientLastName;
     public String patientDOB;
 
+    // Constructor
     public Patient(int patientId, String patientFirstName, String patientLastName, String patientDOB) {
         this.patientId = patientId;
         this.patientFirstName = patientFirstName;
@@ -13,6 +15,7 @@ public class Patient {
         this.patientDOB = patientDOB;
     };
 
+    // Output
     @Override
     public String toString() {
         return "Patient: " + patientId + ", " + patientFirstName + ", " + patientLastName + ", " + patientDOB;

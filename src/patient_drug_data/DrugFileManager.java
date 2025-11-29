@@ -5,8 +5,10 @@ import java.io.*;
 import java.util.ArrayList;
 
 public class DrugFileManager {
+    // File name constant
     private static final String FILE_NAME = "drug_data.txt";
 
+    // Save drug to file
     public static void addDrug(Drug drug) {
         try (FileWriter writer = new FileWriter(FILE_NAME, true)) {
             writer.write(drug.toString() + System.lineSeparator());
@@ -17,6 +19,7 @@ public class DrugFileManager {
         }
     }
 
+    // Load drugs from file
     public static ArrayList<Drug> loadDrugs() {
         ArrayList<Drug> drugList = new ArrayList<>();
 

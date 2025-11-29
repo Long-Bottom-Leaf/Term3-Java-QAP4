@@ -10,9 +10,11 @@ public class PatientDatabaseManager {
     private static final String USER = "";
     private static final String PASSWORD = "";
 
+    // Add patient to database
     public static void addPatient(Patient patient) {
-        String insertSQL = "INSERT INTO patients (patientID, patientFirstName, patientLastName, patientDOB) VALUES (?, ?, ?, ?,)";
+        String insertSQL = "INSERT INTO patients (patientID, patientFirstName, patientLastName, patientDOB) VALUES (?, ?, ?, ?)";
 
+        // Establish connection and execute insert
         try (Connection connection = DriverManager.getConnection(DB_URL, USER, PASSWORD);
             PreparedStatement prepStmt = connection.prepareStatement(insertSQL))
         {
@@ -29,11 +31,14 @@ public class PatientDatabaseManager {
         }
     }
 
+    // Get all patients from database
     public static ArrayList<Patient> getAllPatients() {
+        // Initialize patient list
         ArrayList<Patient> patients = new ArrayList<>();
 
         String selectSQL = "SELECT * FROM patients";
 
+        // Establish connection and execute query
         try (Connection connection = DriverManager.getConnection(DB_URL, USER, PASSWORD);
             Statement stmt = connection.createStatement();
             ResultSet results = stmt.executeQuery(selectSQL))
