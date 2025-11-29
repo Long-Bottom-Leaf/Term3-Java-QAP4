@@ -5,7 +5,7 @@ import java.io.*;
 import java.util.ArrayList;
 
 public class DrugFileManager {
-    private static final String FILE_NAME = "data/drugs.txt";
+    private static final String FILE_NAME = "drug_data.txt";
 
     public static void addDrug(Drug drug) {
         try (FileWriter writer = new FileWriter(FILE_NAME, true)) {
