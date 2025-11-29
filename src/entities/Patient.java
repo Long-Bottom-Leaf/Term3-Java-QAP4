@@ -1,12 +1,12 @@
 package entities;
 
 public class Patient {
-    private int patientId;
-    private String patientFirstName;
-    private String patientLastName;
-    private int patientDOB;
+    public int patientId;
+    public String patientFirstName;
+    public String patientLastName;
+    public String patientDOB;
 
-    public Patient(int patientId, String patientFirstName, String patientLastName, int patientDOB) {
+    public Patient(int patientId, String patientFirstName, String patientLastName, String patientDOB) {
         this.patientId = patientId;
         this.patientFirstName = patientFirstName;
         this.patientLastName = patientLastName;
@@ -25,7 +25,7 @@ public class Patient {
             Integer.parseInt(parts[0]),
             parts[1],
             parts[2],
-            Integer.parseInt(parts[3])
+            parts[3]
         );
     }
 }
