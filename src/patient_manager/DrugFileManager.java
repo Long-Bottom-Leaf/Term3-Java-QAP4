@@ -16,8 +16,8 @@ public class DrugFileManager {
 
         } catch (IOException error) {
             error.printStackTrace();
-        }
-    }
+        };
+    };
 
     // Load drugs from file
     public static ArrayList<Drug> loadDrugs() {
@@ -28,14 +28,14 @@ public class DrugFileManager {
 
             while ((line = reader.readLine()) != null) {
                 drugList.add(Drug.fromString(line));
-            }
+            };
 
             System.out.println("Drugs loaded from file!");
 
         } catch (IOException error) {
             error.printStackTrace();
-        }
+        };
 
         return drugList;
-    }
+    };
 }

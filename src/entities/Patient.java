@@ -30,5 +30,5 @@ public class Patient {
             parts[2],
             parts[3]
         );
-    }
+    };
 }

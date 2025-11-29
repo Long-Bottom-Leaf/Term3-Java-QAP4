@@ -18,17 +18,17 @@ public class Drug {
     // Output
     @Override
     public String toString() {
-        return "Drug: " + drugId + ", " + drugName + ", " + drugCost + ", " + dosage;
+        return drugId + ", " + drugName + ", " + drugCost + ", " + dosage;
     };
 
     public static Drug fromString(String line) {
         String[] parts = line.split(", ");
         
         return new Drug(
-            Integer.parseInt(parts[0]),
-            parts[1],
-            Double.parseDouble(parts[2]),
-            parts[3]
+            Integer.parseInt(parts[0].trim()),
+            parts[1].trim(),
+            Double.parseDouble(parts[2].trim()),
+            parts[3].trim()
         );
-    }
+    };
 }

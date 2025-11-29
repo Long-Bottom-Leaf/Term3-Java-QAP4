@@ -12,7 +12,7 @@ public class PatientDatabaseManager {
 
     // Add patient to database
     public static void addPatient(Patient patient) {
-        String insertSQL = "INSERT INTO patients (patientID, patientFirstName, patientLastName, patientDOB) VALUES (?, ?, ?, ?)";
+        String insertSQL = "INSERT INTO patients (patientid, firstname, lastname, dob) VALUES (?, ?, ?, ?)";
 
         // Establish connection and execute insert
         try (Connection connection = DriverManager.getConnection(DB_URL, USER, PASSWORD);
@@ -28,8 +28,8 @@ public class PatientDatabaseManager {
 
         } catch (SQLException error) {
             error.printStackTrace();
-        }
-    }
+        };
+    };
 
     // Get all patients from database
     public static ArrayList<Patient> getAllPatients() {
@@ -45,18 +45,18 @@ public class PatientDatabaseManager {
         {
             while (results.next()) {
                 patients.add(new Patient(
-                    results.getInt("patientID"),
-                    results.getString("patientFirstName"),
-                    results.getString("patientLastName"),
-                    results.getString("patientDOB")
+                    results.getInt("patientid"),
+                    results.getString("firstname"),
+                    results.getString("lastname"),
+                    results.getString("dob")
                 ));
             }
 
         } catch (SQLException error) {
             error.printStackTrace();
-        }
+        };
 
         return patients;
-    }
+    };
 
 }

@@ -65,10 +65,10 @@ public class Application {
                 case 0:
                     System.out.println("Exiting...");
                     break;
-            }
+            };
 
         } while (choice != 0);
 
         scan.close();
-    }
+    };
 }
