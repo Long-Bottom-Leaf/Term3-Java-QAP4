@@ -1,4 +1,4 @@
-package patient_drug_data;
+package patient_manager;
 
 import entities.Drug;
 import java.io.*;

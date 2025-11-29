@@ -1,8 +1,8 @@
 import java.util.Scanner;
 import entities.Drug;
 import entities.Patient;
-import patient_drug_data.DrugFileManager;
-import patient_drug_data.PatientDatabaseManager;
+import patient_manager.DrugFileManager;
+import patient_manager.PatientDatabaseManager;
 
 public class Application {
     public static void main(String[] args) {

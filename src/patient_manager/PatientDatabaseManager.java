@@ -1,4 +1,4 @@
-package patient_drug_data;
+package patient_manager;
 
 import entities.Patient;
 import java.sql.*;
