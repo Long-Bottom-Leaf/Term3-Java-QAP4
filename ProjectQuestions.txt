@@ -16,4 +16,4 @@
 
 5. Rate the difficulty of each problem and your confidence in solving similar problems in the future.
 
-    I would say the project wasn't too difficult, just a lot of things to remember and implement. I feel a lot beter about Database and java after this QAP
+    I would say the project was a bit difficult, a lot of things to remember and implement. I feel a lot beter about Database and java after this QAP
